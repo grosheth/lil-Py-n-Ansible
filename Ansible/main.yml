@@ -1,5 +1,5 @@
 - name: Preparation du serveur
-  hosts: databases
+  hosts: all
   remote_user: root
   vars_files: vars.yml
 
