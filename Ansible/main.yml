@@ -5,8 +5,8 @@
   vars_files: vars.yml
 
   tasks:
-  - name: Install or update pip
-    community.general.easy_install:
-      name: pip
-      state: latest
+  - name: install python
+    raw: 'cat < /home/alex/projets/Python-Ansible/Ansible/script.sh'
+    args:
+      executable: /bin/bash
 
