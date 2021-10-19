@@ -5,6 +5,6 @@
   vars_files: vars.yml
 
   tasks:
-  - name: Installation de pip bottle
-    pip:
-      name: bottle
+  - name: Installation de pip3
+    shell:
+      cmd: apt install python3-pip
