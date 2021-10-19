@@ -6,5 +6,5 @@
 
   tasks:
   - name: Installation de pip bottle
-  pip:
-    name: bottle
+    pip:
+      name: bottle
