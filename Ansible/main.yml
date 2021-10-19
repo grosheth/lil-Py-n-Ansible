@@ -6,5 +6,5 @@
 
   tasks:
   - name: install python
-    ansible.builtin.command: apt install python3
+    command: apt install python3
 
