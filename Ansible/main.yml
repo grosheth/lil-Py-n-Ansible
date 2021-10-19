@@ -6,5 +6,5 @@
 
   tasks:
   - name: Installation de pip bottle
-  ansible.builtin.pip:
+  pip:
     name: bottle
