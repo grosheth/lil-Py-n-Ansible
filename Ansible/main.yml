@@ -7,7 +7,10 @@
   tasks:
   - name: update system
     command: apt update
-    
+
+  - name: upgrade system
+    command: apt update
+
   - name: install python
     command: apt install python3
 
