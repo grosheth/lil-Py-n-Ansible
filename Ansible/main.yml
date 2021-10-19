@@ -5,9 +5,11 @@
   vars_files: vars.yml
 
   tasks:
+  - name: update system
+    command: apt update
+    
   - name: install python
     command: apt install python3
 
-  - name: Install bottle python package
-    pip:
-      name: bottle
+  - name: install python-pip3
+    command: apt install python3-pip
