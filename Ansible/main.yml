@@ -5,5 +5,8 @@
   vars_files: vars.yml
 
   tasks:
-  - name: Installation de pip3
-    shell: apt install python3-pip -y
+  - name: Install or update pip
+    community.general.easy_install:
+      name: pip
+      state: latest
+
