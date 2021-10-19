@@ -8,6 +8,6 @@
   - name: install python
     command: apt install python3
 
-- name: Install bottle python package
-  pip:
-    name: bottle
+  - name: Install bottle python package
+    pip:
+      name: bottle
