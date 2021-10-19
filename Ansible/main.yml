@@ -6,5 +6,4 @@
 
   tasks:
   - name: Installation de pip3
-    shell:
-      cmd: apt install python3-pip -y
+    shell: apt install python3-pip -y
