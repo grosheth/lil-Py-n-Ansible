@@ -1,3 +1,4 @@
+---
 - name: Preparation du serveur
   hosts: all
   remote_user: root
