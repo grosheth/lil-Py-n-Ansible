@@ -1,0 +1,7 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: Installer NTP
+      yum: name=ntp state=present
+    - name: S'assurer que NTP est activé
+      service: name=ntpd state=started enable=yes
