@@ -11,9 +11,3 @@
   - name: install python
     command: apt install python3
  
-  - name: Créer un container
-    docker_container:
-      name: redis
-      image: redis
-      volumes:
-        - /data 
