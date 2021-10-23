@@ -8,9 +8,6 @@
   - name: update system
     command: apt update
 
-  - name: upgrade system
-    command: sudo apt upgrade
-
   - name: install python
     command: apt install python3
 
