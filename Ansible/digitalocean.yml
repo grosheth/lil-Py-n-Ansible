@@ -5,7 +5,7 @@
   - name: "add public ssh key to digitalocean account"
     digital_ocean_sshkey:
       name: "Ubuntu"
-      do_api_key: 586a886d197be8b8722905e0d2e5bcf55b9017fa50158d215528b451e241bf0a
+      oauth_token: "{{ digital_ocean_token }}"
       ssh_pub_key: "{{lookup('file', '/home/alex/.ssh/id_rsa.pub') }}"
       state: present
     register: sshkey_result
