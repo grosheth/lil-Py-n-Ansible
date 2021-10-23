@@ -10,9 +10,6 @@
 
   - name: install python
     command: apt install python3
-
-  - name: install python-pip3
-    command: apt install python3-pip
  
   - name: Créer un container
     docker_container:
