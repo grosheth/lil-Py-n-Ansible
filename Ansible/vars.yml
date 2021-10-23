@@ -7,7 +7,7 @@ set_timezone: America/Toronto
 
 # Digital Ocean variables
 
-digital_ocean_token: 586a886d197be8b8722905e0d2e5bcf55b9017fa50158d215528b451e241bf0a
+digital_ocean_token:
 droplet_size: s-1vcpu-1gb
 droplet_region: nyc1
 droplet_image: ubuntu-18-04-x64
