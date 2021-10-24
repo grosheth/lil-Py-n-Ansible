@@ -3,7 +3,9 @@
   become: yes
   tasks:
     - name: Mettre a jour le systeme
-      yum: name=* state=latest
+      yum: 
+        name: '*'
+        state: latest
     - name: S'assurer que NTP est installé
       yum: 
         name: ntp
