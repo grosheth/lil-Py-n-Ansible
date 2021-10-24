@@ -3,6 +3,11 @@
   become: yes
   tasks:
     - name: S'assurer que NTP est installé
-      yum: name=ntp state=present
+      yum: 
+        name: ntp
+        state: present
     - name: S'assurer que NTP est activé
-      service: name=ntpd state=started enabled=yes
+      service:
+        name: ntpd
+        state: started
+        enabled: yes
