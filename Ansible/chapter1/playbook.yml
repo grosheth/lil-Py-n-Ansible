@@ -9,11 +9,12 @@
 
     - name: installer firewalld
       yum: name=firewalld state=present
+
     - name: changer le firewall
-      shell: firewall-cmd --add-service=ntp --permanent
+      shell: firewalld --add-service=ntp --permanent
 
     - name: reload firewall
-      shell: firewall-cmd --reload
+      shell: firewalld --reload
 
     - name: changer la timezone
       shell: timedatectl set-timezone America/New_York
