@@ -6,10 +6,33 @@
       yum: 
         name: '*'
         state: latest
-    - name: S'assurer que NTP est installé
-      yum: 
-        name: ntp
-        state: present
+
+    - name: changer le firewall
+      shell: firewall-cmd --add-service=ntp --permanent
+
+    - name: reload firewall
+      shell: firewall-cmd --reload
+
+    - name: changer la timezone
+      shell: timedatectl set-timezone America/New_York
+
+    - name: Installer chrony
+      yum: name=chrony state=present update_cache=yes
+
+    - name: modifier le configuration file de chrony
+      template:
+        src: /home/alex/Python-Ansible/chapter1/chrony.conf.j2
+        dest: /etc/chrony.conf
+        owner: root
+        group: root
+        mode: 0644
+        backup: yes
+
+    - name: redemarrer chrony
+      service:
+        name: chronyd
+        state: restarted
+        
     - name: S'assurer que NTP est activé
       service:
         name: ntpd
