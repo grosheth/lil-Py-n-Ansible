@@ -1,0 +1,1 @@
+Pour lancer les vm sur digital ocean tu doit etre root a cause du become
