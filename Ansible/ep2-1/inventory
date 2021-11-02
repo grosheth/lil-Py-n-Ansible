@@ -1,0 +1,20 @@
+# application server
+[app]
+root@178.128.238.19
+root@138.197.164.161
+root@167.99.191.9
+root@159.203.43.200
+
+# Database Server
+[db]
+167.99.187.72
+
+# group has all the server
+[multi:children]
+app
+db
+
+
+# variables for all the servers
+[multi:vars]
+

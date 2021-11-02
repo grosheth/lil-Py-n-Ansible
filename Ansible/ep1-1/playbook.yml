@@ -11,7 +11,10 @@
       shell: timedatectl set-timezone America/New_York
 
     - name: Installer ntp
-      yum: name=ntp state=present update_cache=yes
+      yum: 
+        name: ntp 
+        state: present 
+        update_cache: yes
         
     - name: S'assurer que NTP est activé
       service:
